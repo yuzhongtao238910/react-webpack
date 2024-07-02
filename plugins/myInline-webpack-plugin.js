@@ -94,7 +94,7 @@ class MyInlineWebpackPlugin {
       const realPath = path.resolve(__dirname, "../dist", filepath)
       return {
         tagName: 'script',
-        innerHTML: assets[filepath.slice(1)].source(),
+        innerHTML: assets[filepath.slice(1)]?.source(),
         closeTag: true
       }
     })
